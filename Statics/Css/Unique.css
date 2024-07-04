@@ -1,0 +1,14 @@
+/*Container*/
+   .Box{
+    margin-right: 8%;
+    margin-left: 8%;
+    background-color: #cbefcb;
+    box-shadow: 1px 8px 10px black;
+    }
+    .IndexBox{
+     width: 91%;
+     margin-left: 4%;
+     background-color: #cbefcb;
+     box-shadow: 1px 8px 10px black;
+    }
+/*Container*/

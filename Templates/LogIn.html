@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/Login.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/OldBoots.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/RegularStyle.css' %}">
+    <script type="text/javascript" src="{% static 'Js/Basic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/AjaxPost.js' %}"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static 'Css/MsgBox.css' %}">
+    <script type="text/javascript" src="{% static 'Js/MsgBox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/Login.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/CommonMethod.js' %}"></script>
+</head>
+<style>
+     .fade {
+   opacity: 0;
+   -webkit-transition: opacity 2.25s linear !important;
+      -moz-transition: opacity 2.25s linear !important;
+       -ms-transition: opacity 2.25s linear !important;
+        -o-transition: opacity 2.25s linear !important;
+           transition: opacity 2.25s linear !important;
+ }
+</style>
+<body style="background-image:url('{% static 'Img/Billing.jpg' %}');">
+<div class="container">
+    <div class="row " >
+       <div class="col-md-12 text-center Head" style="background-color: #111517 !important;"><label class="Heading">LOGIN</label></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style=""><label style="text-decoration:underline;">User Type</label></div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="col-md-2"></div>
+            <div class="col-md-1"><input type="radio" class="radio-inline" id="ChkAdmin"></div>
+            <div class="col-md-7"><label style="color:blue !important;"> Admin</label></div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-md-2"></div>
+            <div class="col-md-1"><input type="radio" class="radio-inline" id="ChkUser"></div>
+            <div class="col-md-7"><label style="color:blue !important;"> User</label> </div>
+            <div class="col-md-2"></div>
+        </div>
+        </div>
+    <div class="row">
+          <div class="col-md-4 clsHead"><label>User Name</label></div>
+          <div class="col-md-4 User"></div>
+          <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+          <div class="col-md-4"><input type="text" class="form-control clsInput clsFLCaps ClsCharSpecial" style="text-align:center" id="UserName" placeholder="UserName" maxlength="12" name="UserName"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"><i class="fa fa-user"></i></div>
+    </div>
+
+    <!--<div class="row">
+          <div class="col-md-4 clsHead"><label>Branch</label></div>
+          <div class="col-md-4 User"></div>
+          <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4"><select class="form-control" style="text-align:center" id="Branch" >
+            <option id="None" value="">---</option>
+            <option id="Coimbatore">CBM</option>
+            <option id="Pollachi">POY</option>
+            <option id="Tiruppur">TUP</option>
+        </select></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"><i class="fa fa-code-branch"></i></div>
+    </div>-->
+    <div class="row">
+          <div class="col-md-4 clsHead"><label>Password</label></div>
+          <div class="col-md-4 Pwd"></div>
+          <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+          <div class="col-md-4"><input type="password" class="form-control clsInput ClsCharSpecial" id="PassWord" maxlength="10" style="text-align:center" placeholder="Password" name="UserName" ></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-4"><i onclick="myFunction()" class="fa fa-eye"></i></div>
+    </div>
+    <br>
+    <!--<div class="row">
+          <div class="col-md-12"><p class="clsHighLight">(Please fill the password with 4 letters of Alphabetic and 4 letters of Numeric.)</p></div>
+    </div>-->
+    <div class="row">
+          <div class="col-md-12">
+              <div class="col-md-12"><button class="btn clsLog" id="LogIn"><i class="fa fa-user"></i>   Sign-Up</button></div>
+          </div>
+          <!--<div class="col-md-6">
+              <div class="col-md-12"><button class="btn clsSign" id="SignIn"> <i class="fa fa-sign-in"></i>   Sign-In</button></div>
+          </div>-->
+    </div>
+    <!--<div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6"><div class="col-md-12 clsForgPsw"><label>Forget Password</label></div><div class="col-md-12"><button class="btn clsKeyPwd"> <i class="fa fa-key"></i></button></div></div>
+        <div class="col-md-3"></div>
+    </div>-->
+    <!-- Modal -->
+<!--   <div class="modal fade hide" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+    <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Logged-In.....</h4>
+      </div>
+      <div class="modal-body">
+        Your Successfully Logged In.....
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+     </div>
+    </div>
+   </div>-->
+    <br>
+</div>
+</body>
+</html>

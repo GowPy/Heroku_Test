@@ -1,0 +1,91 @@
+
+#SignIn{    margin-left: 16%;
+    width: 70%;}
+#LogIn{
+     padding-right: 30%;
+     margin-left: 25%;
+     width: 47%;
+    /* text-align: center; */
+    }
+.clsHead:hover{
+            /*text-shadow: 2px 2px red;*/
+            font-family:Times New Roman;
+     }
+
+.clsKeyPwd{
+     border-radius: 16px 16px 16px 16px !important;
+    width: 23%;
+    margin-left: 32%;
+     }
+.clsLog{
+       width:33%;
+     }
+.clsSign{
+      width: 33%;
+     }
+
+.clsFrgtPsw{
+        margin-left: 38%;
+        color: darkblue;
+     }
+.clsFrgtPsw:hover{
+        text-decoration:underline;
+     }
+.clsHighLight{
+      color:#c12424;
+      font-size: 14px;
+      }
+.clsAccount{
+             font-size: 17px !important;
+             margin-left: -6%;
+      }
+
+.form-control{
+        width: 316% !important;
+     }
+.clsNewAcc{
+        margin-left: 26%;
+    }
+label{
+       color:#07740fcf !important;
+    }
+ .clsForgPsw{
+   margin-top: 16px;
+    margin-left: 11px;
+ }
+  .container{
+         box-shadow: -9px 12px 7px #191b1c;
+         background-color: whitesmoke;
+         width: 34% !important;
+         margin-left: 332px !important;
+         /* margin-top: 66px !important; */
+         margin-top: 15% !important;
+  }
+  .btn:hover{
+     color:white !important;
+  }
+  .glass:hover{
+     color:red !important;
+  }
+  .glass{
+    color: red !important;
+    text-shadow: -1px 2px yellow;
+    background-color: #44423d;
+    font-size: 18px;
+    font-family: Times New Roman;
+    margin-top: -28px;
+    margin-bottom: 9% !important;
+    margin-left: -169px;
+    width: 370%;
+  }
+  .fa-user,.fa-eye,.fa-code-branch{
+    padding-top: 4%;
+    padding-left: 78%;
+  }
+  .fa-code-branch:before {
+    content: "\f126";
+    font-weight:bold;
+  }
+  select{
+    appearance:none;
+  }

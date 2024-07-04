@@ -1,0 +1,387 @@
+* {
+    font-family: Calibri;
+}
+
+body, html {
+    /*background-color: #fbf9d2;*/
+    background-color: #eeeeee;
+}
+
+.mt2 label {
+    margin-top: 2px !important;
+}
+
+/*.singleLine {
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    box-shadow: none;
+    background-color: transparent !important;
+}
+
+    .singleLine:focus {
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }*/
+
+
+.bLess td {
+    padding: 0px !important;
+}
+
+
+
+.bLess input, .bLess select {
+    border: 0.7px;
+    /*box-shadow: none;*/
+}
+
+/*.bLess input:focus, .bLess select:focus {
+      box-shadow: none !important;
+            -webkit-box-shadow: 0px 2px 6px 1px rgba(148,186,51,1);
+    -moz-box-shadow: 0px 2px 6px 1px rgba(148,186,51,1);
+    box-shadow: 0px 2px 6px 1px rgba(148,186,51,1);
+    }*/
+
+#theadDr th {
+    border-bottom: 0px !important;
+}
+
+
+.mt15 {
+    margin-top: 15px;
+}
+
+
+.mt8 {
+    margin-top: 8px;
+}
+
+
+.form-control {
+    border-radius: 0px;
+}
+
+hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+thead th {
+    text-align: center !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #94ba33 !important;
+}
+
+.bShadow {
+    -webkit-box-shadow: 0px 2px 6px 1px rgba(148,186,51,1);
+    -moz-box-shadow: 0px 2px 6px 1px rgba(148,186,51,1);
+    box-shadow: 0px 2px 6px 1px rgba(148,186,51,1);
+}
+
+label {
+    font-size: 14px;
+}
+
+.form-control {
+    height: 28px;
+    padding: 2px 8px;
+    font-size: 15px;
+    background-color: transparent !important;
+}
+
+table td {
+    background-color: transparent !important;
+}
+
+
+select option:hover, select option:active {
+    background: #94ba33 !important;
+}
+
+.tbodySize td {
+    height: 22px !important;
+}
+
+select::-ms-expand {
+    display: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: "";
+}
+
+
+.activeTab {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+
+.roundButton {
+    border-radius: 45px;
+    height: 55px;
+    width: 55px;
+    background-color: #94ba33;
+    color: #ffffff;
+    border: 2px solid white;
+    -webkit-box-shadow: 0.5px 0.5px 2px 0.5px rgba(98,98,98,1);
+    -moz-box-shadow: 0.5px 0.5px 2px 0.5px rgba(98,98,98,1);
+    box-shadow: 0.5px 0.5px 2px 0.5px rgba(98,98,98,1);
+}
+
+
+    .roundButton:hover {
+        -webkit-box-shadow: 2px 2px 10px 1px rgba(98,98,98,1);
+        -moz-box-shadow: 2px 2px 10px 1px rgba(98,98,98,1);
+        box-shadow: 2px 2px 10px 1px rgba(98,98,98,1);
+    }
+
+.padT34 {
+    padding-top: 30px;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .padT34 {
+        padding-top: 0px;
+    }
+}
+
+
+.clsDelete, .clsEdit, .clsUpdate {
+    cursor: pointer;
+}
+
+#mainDiv {
+    /*background-color: #fff;*/
+    background-color: #ffffff;
+    padding: 18px 8px !important;
+}
+
+
+.divBG {
+    /*background-color: #fff;*/
+    background-color: #ffffff;
+    padding: 18px 8px !important;
+}
+
+
+
+input,
+textarea,
+[contenteditable] {
+    /*color: #666;*/
+    /*cursor: url("cursor1.gif");*/
+    caret-color: #de5347;
+    caret-width: 2px;
+    caret-size: 2px;
+}
+
+
+    input:focus, textarea:focus {
+        background-color: #ececec !important;
+    }
+
+
+th {
+    background-color: #94ba33;
+    color: #ffffff;
+}
+
+.w3Shadow:hover {
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.blueShadow {
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(91,192,222,1);
+    -moz-box-shadow: 0px 2px 8px 0px rgba(91,192,222,1);
+    box-shadow: 0px 2px 8px 0px rgba(91,192,222,1);
+}
+
+
+/*.card [data-background-color="green"] {
+    background: linear-gradient(60deg, #66bb6a, #43a047);
+    box-shadow: 0 12px 20px -10px rgba(76, 175, 80, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(76, 175, 80, 0.2);
+}
+
+
+ .card [data-background-color="orange"] {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+    box-shadow: 0 12px 20px -10px rgba(255, 152, 0, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(255, 152, 0, 0.2);
+}
+
+
+ .card [data-background-color="red"] {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+}*/
+
+
+
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: none;
+}
+
+
+table.dataTable.no-footer {
+    border-bottom: none;
+}
+
+
+
+.blink {
+    animation-duration: 2000ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation: blink 2000ms infinite; /* Safari and Chrome */
+}
+
+@keyframes blink {
+    from {
+        color: white;
+    }
+
+    to {
+        color: red;
+    }
+}
+
+@-webkit-keyframes blink {
+    from {
+        color: white;
+    }
+
+    to {
+        color: red;
+    }
+}
+
+
+.tdPad0 td {
+    padding: 6px 12px 0px 12px !important;
+}
+
+
+
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    line-height: 1.0;
+}
+
+
+
+/*.headLabel {
+    font-size: 24px;margin-top: -12px !important;color:#94ba33;
+}*/
+
+.badge {
+    font-size: 14px;
+    background-color: #04acdd;
+}
+
+
+/*  Back button hover  */
+
+#divGoBack {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9999;
+}
+
+#btnGoBack, #btnGoRelated {
+    width: 60px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: #003f66;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+    animation-duration: .2s;
+    transition: all .2s ease-in-out;
+}
+
+    #btnGoBack:hover, #btnGoRelated:hover {
+        background-color: white !important;
+        color: #003f66 !important;
+        transform: scale(1.2);
+    }
+
+
+/* this is important*/
+.fa {
+    font-family: FontAwesome !important;
+}
+
+
+.navShadow {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(148,186,51,1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(148,186,51,1);
+    box-shadow: 0px 2px 5px 0px rgba(148,186,51,1);
+}
+
+.navbar {
+    background-color: #ffffff !important;
+}
+
+.activeNav {
+    background-color: #94bb33;
+    color: white;
+}
+
+
+/*.w3-btn{
+    -webkit-transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+    transition: background-color .3s,color .15s,box-shadow .3s,opacity 0.3s;
+}
+
+.w3-btn, .w3-btn:link, .w3-btn:visited {
+    color: #FFFFFF;
+    background-color: #73AD21;
+    background-color: #4CAF50;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}*/
+
+.w3-shadow {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+
+.txtGreen {
+    color: #94bb33;
+}
+
+.txtBlue {
+    color: #01abdc;
+}
+
+.txtRed {
+    color: red;
+}
+
+
+.Loader1{
+    position:fixed;
+    z-index:9999 !important;
+    top:40%;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+
+
+.mand{
+    border-left:2px solid red;
+}
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;   /*prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    z-index:1000 !important;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T-Bill</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% include 'BMSHome.html' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/Unique.css' %}">
+    <!--<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>-->
+    <!--    -->
+    <script type="text/javascript" src="{% static 'Js/Basic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/CommonMethod.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'Css/Jquery.css' %}">
+    <script type="text/javascript" src="{% static 'Js/AutoComplete_1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/AutoComplete_2.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/T_Bill.js' %}"></script>
+    <!--<link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>-->
+    <!-- <script type="text/javascript" src="{% static 'Js/AutoComplete_1.js' %}"></script>
+     <script type="text/javascript" src="{% static 'Js/AutoComplete_2.js' %}"></script>-->
+    <!-- <link rel="stylesheet" href="{% static 'Css/Login.css' %}">
+     <link rel="stylesheet" href="{% static 'Css/OldBoots.css' %}">
+     <link rel="stylesheet" href="{% static 'Css/RegularStyle.css' %}">
+     <link rel="stylesheet" href="{% static 'Css/Layout.css' %}">
+     <script type="text/javascript" src="{% static 'Js/Basic.js' %}"></script>
+     <script type="text/javascript" src="{% static 'Js/CommonMethod.js' %}"></script>
+     <script type="text/javascript" src="{% static 'Js/BMSHome.js' %}"></script>-->
+</head>
+<style>
+   .Box{
+    margin-left: 8%;
+    background-color: #cbefcb;
+    box-shadow: 1px 8px 10px black;
+    width: 83%;
+}
+    .form-control {
+    width: 161% !important;
+    margin-top: 28px;
+}
+.Mtop{
+ margin-top: 6%;
+ font-weight:bold;
+}
+#btnSave{
+    margin-top: 90%;
+    background-color: #621818;
+    font-weight:bold;
+}
+#btnExit{
+    margin-top: 90%;
+    margin-left: -84%;
+    background-color: #2e2929;
+    font-weight:bold;
+}
+.table-responsive{
+     margin-top: 50px;
+}
+thead{
+  background-color:skyblue;
+  text-align:center;
+  font-weigt:bold;
+}
+tbody{
+   background-color:#efeaea;
+   text-align:center;
+}
+</style>
+<body>
+<div class="col-md-12 Box">
+    <div class="col-md-12"><h1 style="text-align:center;color:forestgreen;">Invoice</h1></div>
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <div class="col-md-4 Mtop">Product Name</div>
+                    <div class="col-md-8"><input id="idProduct_Name" type="text" class="form-control"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4 Mtop">Product Quantity</div>
+                    <div class="col-md-8"><input id="idProduct_Qty" type="text" class="form-control clsNumber"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4 Mtop">Product UOM</div>
+                    <div class="col-md-8"><input id="idProduct_UOM" type="text" class="form-control"></div>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-4 Mtop">Product Price</div>
+                    <div class="col-md-8"><input id="idProduct_Price" type="text" class="form-control clsNumber"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12" style="text-align:center;">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4" style=""><button class="btn" id="btnSave">Save</button></div>
+                    <div class="col-md-4" style=""><button class="btn" id="btnExit">Exit</button></div>
+                </div>
+            </div>
+        </div>
+    <div>
+       <table id="cloneThisRow" style="display:none">
+          <tr id="MainRow_" class="CloneRow">
+                <td><input type="text" id="Sl_No_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="Product_Name_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="Product_Qty_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="Product_UOM_" style="width: 101% !important;margin-top:0px;" class="form-control clsUOM"></td>
+                <td><input type="text" id="ProductPrice_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><img id="Edit_" src="background-image:url('{% static 'Img/Billing.jpg' %}');"></td>
+                <td><img id="Delete_" src="background-image:url('{% static 'Img/Edit.PNG' %}');"></td>
+            </tr>
+       </table>
+    </div>
+    <div class="col-md-12">
+        <table id="tableInv" class="table table-bordered no-footer dataTable  table-responsive" >
+            <thead>
+            <tr>
+                <th>SL_No</th>
+                <th>Product Name</th>
+                <th>Product Quantity</th>
+                <th>Product UOM</th>
+                <th>Product Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody id="tbodyDr"></tbody>
+            </table>
+            <table style="border:none" class="clsHideRow">
+                <tbody>
+                    <tr>
+                        <td><a id="idaddnewrow" style="cursor:pointer;">+ [Add Row]</a></td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <div class="clearfix"></div><br><br><br><br><br><br>
+        </div>
+<!--    <div class="clearfix"></div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+</body>
+</html>

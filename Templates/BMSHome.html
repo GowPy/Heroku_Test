@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>BMS Home-Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/Login.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/OldBoots.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/RegularStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'Css/Layout.css' %}">
+    <script type="text/javascript" src="{% static 'Js/Basic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/CommonMethod.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/CommonMethod.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'Css/Loader.css' %}">
+    <script type="text/javascript" src="{% static 'Js/Loader.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'Css/MsgBox.css' %}">
+    <script type="text/javascript" src="{% static 'Js/MsgBox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/BMSHome.js' %}"></script>
+</head>
+<style>
+#lblUserName{
+    margin-left: 52%;
+    font-size: 24px;
+    color: #9dcf9c !important;
+    text-shadow: #242108 1px -1px 0px;
+}
+</style>
+<body>
+<!--<div class="hide" id="idUserName"></div>
+<div class="hide" id="idToken"></div>-->
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+      <a class="Header">BMS</a>
+      <a id="lblUserName"></a>
+      <a class="hide" id="lblToken"></a>
+    </div>
+    <nav>
+      <div class="nav-mobile"><a id="navbar-toggle"><span></span></a></div>
+      <ul class="nav-list" >
+        <li id="idDashBoard">
+          <a href="/BMSApp/Dashboard">DashBoard</a>
+        </li>
+        <li>
+          <a>Master</a>
+          <ul class="navbar-dropdown">
+            <li class="active" id="idUserMaster">
+              <a href="/BMSApp/User_MasterIndex">User Master</a>
+            </li>
+            <li id="idSnackMaster">
+              <a href="/BMSApp/Snack_MasterIndex">Snack Master</a>
+            </li>
+            <li id="idDrinkMaster">
+              <a href="/BMSApp/Drink_MasterIndex">Drink Master</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>BMS</a>
+          <ul class="navbar-dropdown">
+            <li id="idT_Bill">
+              <a href="/BMSApp/T_Bill">T-Bill</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>Report</a>
+            <ul class="navbar-dropdown">
+            <li id="idDailyReport">
+              <a href="/BMSApp/DailyReport">Daily Report</a>
+            </li>
+            <li id="idMonthlyReport">
+              <a href="/BMSApp/MonthlyReport">Mothly Report</a>
+            </li>
+            <li id="idYearlyReport">
+              <a href="/BMSApp/YearlyReport">Yearly Report</a>
+            </li>
+          </ul>
+        </li>
+
+      <li style="padding-top:15px;padding-left:266px;text-align:left"><button id="btnLogOut" onclick="FuncLogOut()" class="btn"><i class="fa fa-power-off"></i> Log - Out</button></li>
+      </ul>
+
+    </nav>
+  </div>
+     <div class="loader"></div>
+</section>
+<!--<script>
+$(function($) {
+  $(function() {
+
+    //  open and close nav
+    $('#navbar-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+
+
+    // Hamburger toggle
+    $('#navbar-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+
+
+    // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.navbar-dropdown').slideToggle("medium");
+
+      // Close dropdown when select another dropdown
+      $('.navbar-dropdown').not($(this).siblings()).hide("medium");
+      e.stopPropagation();
+    });
+
+
+    // Click outside the dropdown will remove the dropdown class
+    $('html').click(function() {
+      $('.navbar-dropdown').hide();
+    });
+  });
+});
+</script>-->
+<!--<script>
+  var menuid = "idDashBoard";
+$(function() {
+    $('.nav li').removeClass('active');
+    $(menuid).addClass("active");
+});
+</script>-->
+
+
+</body>
+</html>

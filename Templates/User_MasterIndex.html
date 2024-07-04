@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index-User Master</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% include 'BMSHome.html' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Css/Unique.css' %}">
+ <!--   <link rel="stylesheet" href="{% static 'Css/Customize.css' %}">-->
+    <script type="text/javascript" src="{% static 'Js/Basic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/CommonMethod.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/AjaxPost.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'Css/Btns.css' %}">
+    <script type="text/javascript" src="{% static 'Js/DataTable_min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'Js/DataTable_Btns.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js" ></script>
+    <script type="text/javascript"  src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="{% static 'Js/UserMaster_Index.js' %}"></script>
+</head>
+<style>
+    thead{
+     background-color:skyblue;
+     text-align:center;
+     font-weigt:bold;
+    }
+</style>
+<body>
+<div class="col-md-12 IndexBox">
+    <div class="col-md-12" id="IndexRow">
+        <div class="col-md-2"><span id="IndexHead">User Master</span></div>
+        <div class="col-md-7"><input type="text" class="form-control" id="idSearch" style="width: 86% !important;"></div>
+        <div class="col-md-3">
+            <div class="col-md-6"><button class="btn" id="btnSearch"><i class="fa fa-search"> Search</i></button></div>
+            <div class="col-md-6"><button class="btn" id="btnNew"><i class="fa fa-plus"> New</i> </button></div>
+        </div>
+    </div>
+
+  <!--  <div>
+       <table id="cloneThisRow" style="display:none">
+          <tr id="MainRow_" class="CloneRow">
+                <td style="display:none" id="Token_"></td>
+                <td><input type="text" id="Edit_" style="width: 101% !important;margin-top:0px;" class="form-control">&lt;!&ndash;<img id="Edit_" src="">&ndash;&gt;</td>
+                <td><input type="text" id="Sl_No_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="User_Name_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="User_Qty_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="User_UOM_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+                <td><input type="text" id="UserPrice_" style="width: 101% !important;margin-top:0px;" class="form-control"></td>
+            </tr>
+       </table>
+    </div>-->
+    <div class="col-md-12">
+        <table id="tableUserMaster" class="table table-bordered no-footer dataTable  table-responsive" >
+            <thead>
+            <tr>
+                <th>Edit</th>
+                <th>SL_No</th>
+                <th>User Name</th>
+                <th>User Quantity</th>
+                <th>User UOM</th>
+                <th>User Price</th>
+            </tr>
+            </thead>
+            <tbody id="TbodyUserMaster" class="text-center"></tbody>
+        </table>
+    </div>
+    <div class="clearfix"></div><br><br><br><br><br><br>
+        </div>
+
+</body>
+</html>
